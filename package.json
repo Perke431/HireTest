@@ -1,0 +1,21 @@
+{
+  "name": "HireTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-scss": "node-sass -w ./src/scss/ -o ./dist/css/ --recursive",
+    "watch-ts": "tsc -w",
+    "server": "live-server ./dist --entry-file=page1.html",
+    "dev": "concurrently --kill-others \"npm run watch-scss\" \"npm run watch-ts\" \"npm run server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "live-server": "^1.2.2",
+    "node-sass": "^7.0.3",
+    "typescript": "^4.8.4"
+  }
+}
